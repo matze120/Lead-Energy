@@ -52,10 +52,10 @@ void loop()
   if (buttonState == HIGH)
   {
     // turn Lamp "wohnzimmer" on:
-    LampState = !LampState;
+    LampOn = !LampOn;
   }
   // Send the command to the Lamp
-  wohnzimmer.OnOffState(LampState);
+  wohnzimmer.LeadOnOff(LampOn);
 
   // Wait a second for the Lamp to react and to get rid of a bouncing pushbutton
   delay(1000);
